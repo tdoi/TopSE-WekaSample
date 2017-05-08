@@ -1,4 +1,4 @@
-package jp.topse.nosql.weka;
+package jp.topse.bigdata.weka;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

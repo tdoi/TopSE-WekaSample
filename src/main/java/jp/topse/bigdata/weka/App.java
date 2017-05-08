@@ -1,4 +1,4 @@
-package jp.topse.nosql.weka;
+package jp.topse.bigdata.weka;
 
 /**
  * Hello world!
@@ -8,6 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        weka.gui.GUIChooser.main(args);
     }
 }
