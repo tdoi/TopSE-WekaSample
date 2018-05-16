@@ -37,7 +37,7 @@ public class Practice1 {
             tree.buildClassifier(trainData);
 
             for (int i = 0;i < 10; ++i) {
-                evalResult(tree, testData, testData);
+                evalResult(tree, trainData, testData);
             }
             
 //            showResult(tree);
