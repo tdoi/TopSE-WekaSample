@@ -15,7 +15,7 @@ import java.io.IOException;
 public class Practice1 {
     
     private static final String TRAIN_PATH= "src/main/resources/data1/train.arff";
-    private static final String TEST_PATH= "src/main/resources/data1/train.arff";
+    private static final String TEST_PATH= "src/main/resources/data1/test.arff";
 
     public static void main(String[] args) {
         Practice1 app = new Practice1();
@@ -31,15 +31,14 @@ public class Practice1 {
             }
             
             J48 tree = new J48();
-            String[] options = new String[1];
-            options[0] = "-U";
+            String[] options = new String[] {
+                "-U"
+            };
             tree.setOptions(options);
             tree.buildClassifier(trainData);
 
-            for (int i = 0;i < 10; ++i) {
-                evalResult(tree, trainData, testData);
-            }
-            
+            evalResult(tree, trainData, testData);
+
 //            showResult(tree);
         } catch (Exception e) {
             e.printStackTrace();
